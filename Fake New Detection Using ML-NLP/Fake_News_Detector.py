@@ -47,10 +47,7 @@ model.fit(tfidf_train, y_train)
 
 print("✅ Model trained successfully!")
 
-
-# ==========================
 # Step 6: Evaluate Model
-# ==========================
 y_pred = model.predict(tfidf_test)
 score = accuracy_score(y_test, y_pred)
 
@@ -59,9 +56,7 @@ print(f"✅ Accuracy: {round(score*100, 2)}%")
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 
-# ==========================
 # Step 7: Save Model & Vectorizer
-# ==========================
 joblib.dump(model, "fake_news_model.pkl")
 joblib.dump(vectorizer, "vectorizer.pkl")
 
@@ -69,5 +64,6 @@ print("\n💾 Model and vectorizer saved successfully!")
 print("➡️ fake_news_model.pkl")
 
 print("➡️ vectorizer.pkl")
+
 
 
