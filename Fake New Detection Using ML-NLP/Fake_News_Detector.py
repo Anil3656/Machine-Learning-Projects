@@ -7,9 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-# ==========================
 # Step 1: Load Dataset
-# ==========================
 data = pd.read_csv(r"C:\Users\aneel.kumar\OneDrive - IMCS Group\Desktop\Aneel\Naresh_IT\Fake New Detection Using ML-NLP\train.csv")
 
 # Display basic info
@@ -17,9 +15,8 @@ print("✅ Dataset Loaded Successfully!")
 print(f"Total samples: {data.shape[0]}")
 print(data.head(10))
 
-# ==========================
+
 # Step 2: Handle Missing Data
-# ==========================
 data = data.dropna(subset=['title', 'text', 'label'])
 
 # Combine title and text for better context
@@ -82,3 +79,4 @@ print("\n💾 Model and vectorizer saved successfully!")
 print("➡️ fake_news_model.pkl")
 
 print("➡️ vectorizer.pkl")
+
