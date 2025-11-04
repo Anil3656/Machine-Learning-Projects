@@ -2,15 +2,12 @@ import streamlit as st
 import joblib
 import numpy as np
 
-# ==============================
 # Load the Trained Model & Vectorizer
-# ==============================
 model = joblib.load("fake_news_model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 
-# ==============================
+
 # Page Configuration
-# ==============================
 st.set_page_config(
     page_title="📰 Fake News Detector",
     page_icon="🚫",
@@ -18,9 +15,8 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# ==============================
+
 # Custom CSS Styling
-# ==============================
 st.markdown("""
 <style>
     body {
@@ -73,9 +69,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ==============================
 # Header Section
-# ==============================
 st.markdown("<h1 class='title'>📰 Fake News Detection App</h1>", unsafe_allow_html=True)
 st.markdown("<p class='subtitle'>Enter a news headline or article to check if it's <b>Fake</b> or <b>Real</b></p>", unsafe_allow_html=True)
 
@@ -119,3 +113,4 @@ if st.button("🔍 Analyze News"):
 st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown("<p class='footer'>Built with  using Streamlit & Scikit-learn</p>", unsafe_allow_html=True)
 st.markdown("<p class='footer'>© 2024 Fake News Detector Developed by @AK</p>", unsafe_allow_html=True)
+
