@@ -1,8 +1,4 @@
-# ============================================
 # 📄 Fake News Detection System
-# Author: Your Name
-# ============================================
-
 import pandas as pd
 import numpy as np
 import joblib
@@ -84,4 +80,5 @@ joblib.dump(vectorizer, "vectorizer.pkl")
 
 print("\n💾 Model and vectorizer saved successfully!")
 print("➡️ fake_news_model.pkl")
+
 print("➡️ vectorizer.pkl")
