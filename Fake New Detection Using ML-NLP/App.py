@@ -73,14 +73,12 @@ st.markdown("""
 st.markdown("<h1 class='title'>📰 Fake News Detection App</h1>", unsafe_allow_html=True)
 st.markdown("<p class='subtitle'>Enter a news headline or article to check if it's <b>Fake</b> or <b>Real</b></p>", unsafe_allow_html=True)
 
-# ==============================
+
 # User Input
-# ==============================
 user_input = st.text_area("🧾 Enter the news content below:", height=200, placeholder="Type or paste a news headline/article here...")
 
-# ==============================
+
 # Prediction Logic
-# ==============================
 if st.button("🔍 Analyze News"):
     if user_input.strip():
         # Transform input and predict probabilities
@@ -107,10 +105,10 @@ if st.button("🔍 Analyze News"):
     else:
         st.warning("⚠️ Please enter a news text to analyze.")
 
-# ==============================
-# Footer
-# ==============================
+=
+# Footer Section
 st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown("<p class='footer'>Built with  using Streamlit & Scikit-learn</p>", unsafe_allow_html=True)
 st.markdown("<p class='footer'>© 2024 Fake News Detector Developed by @AK</p>", unsafe_allow_html=True)
+
 
