@@ -24,10 +24,7 @@ data['content'] = data['title'] + " " + data['text']
 
 print("✅ Missing data handled!")
 
-
-# ==========================
 # Step 3: Split Data
-# ==========================
 X = data['content']
 y = data['label']
 
@@ -37,21 +34,14 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 print("✅ Data split into training and testing sets!")
 
-
-
-# ==========================
 # Step 4: Vectorization
-# ==========================
 vectorizer = TfidfVectorizer(stop_words='english', max_df=0.7)
 tfidf_train = vectorizer.fit_transform(X_train)
 tfidf_test = vectorizer.transform(X_test)
 
 print("✅ Text data vectorized!")
 
-
-# ==========================
 # Step 5: Train Model
-# ==========================
 model = PassiveAggressiveClassifier(max_iter=50)
 model.fit(tfidf_train, y_train)
 
@@ -79,4 +69,5 @@ print("\n💾 Model and vectorizer saved successfully!")
 print("➡️ fake_news_model.pkl")
 
 print("➡️ vectorizer.pkl")
+
 
